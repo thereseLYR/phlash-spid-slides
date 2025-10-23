@@ -1,15 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Title from "../slides/Title.astro";
-import WhyAstro from "../slides/WhyAstro.astro";
+import Performance from "../slides/01-performance-matters/Performance.astro";
+import Lighthouse from "../slides/02-what-lighthouse-is/Lighthouse.astro";
+import KeyMetrics from "../slides/03-key-metrics-explained/KeyMetrics.astro";
+import CommonOptimizations from "../slides/04-common-optimization-techniques/CommonOptimizations.astro";
+import Measurements from "../slides/05-measurement-strategies/Measurements.astro";
+import WorkshopInstructions from "../slides/06-workshop-time/WorkshopInstructions.astro";
+import Wrapup from "../slides/07-closing-strategies/Wrapup.astro";
 ---
 
-<Layout title="My Awesome Talk Title">
+<Layout title="Phlash Spid - Performance Optimization Workshop">
 	<main class="reveal">
 		<div class="slides">
-			<Title />
-			<WhyAstro />
 			<!-- Put your slides here -->
+			 <Performance />
+			 <Lighthouse />
+			 <KeyMetrics />
+			 <CommonOptimizations />
+			 <Measurements />
+			 <WorkshopInstructions />
+			 <Wrapup />
 		</div>
 	</main>
 </Layout>

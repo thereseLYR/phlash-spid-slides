@@ -1,0 +1,176 @@
+---
+import Slide from "../../components/Slide.astro"
+---
+
+<Slide sectionTitle="Key Performance Metrics">
+  <h2>Key Performance Metrics</h2>
+  <p>Overview of the core metrics Lighthouse and Web Vitals report.</p>
+</Slide>
+
+<!-- LCP Section -->
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="Largest Contentful Paint (LCP)">
+  <h2>Largest Contentful Paint</h2> 
+</Slide>
+
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="Largest Contentful Paint (LCP)">
+  <h3>What it measures</h3> 
+  <p>Time until the largest visible content element (image or text block) is painted.</p>
+</Slide>
+
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="Largest Contentful Paint (LCP)">
+  <h3>Why it matters</h3> 
+  <p>TLCP closely correlates with perceived load speed and user satisfaction</p>
+</Slide>
+
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="Largest Contentful Paint (LCP)">
+  <h3>How to improve</h3> 
+  <ul>
+    <li class="fragment">
+      Optimize server response (TTFB)
+    </li>
+    <li class="fragment">
+      Use CDNs for media/fonts
+    </li>
+    <li class="fragment">
+      Preload, compress, and properly size images
+    </li>
+  </ul>
+</Slide>
+
+<!-- FID Section -->
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="FID/INP">
+  <h2>First Input Delay (FID) / Interaction to Next Paint (INP)</h2> 
+</Slide>
+
+<Slide
+  sectionTitle="Key Performance Metrics" subSectionTitle="FID/INP">
+  <h3>What it measures</h3> 
+  <p>Responsiveness to user input. <p>
+  <p class="fragment">FID measures initial delay; INP captures responsiveness over the whole page lifecycle.</p>
+</Slide>
+
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="FID/INP">
+  <h3>Why it matters</h3> 
+  <p>Users perceive a site as sluggish if interactions are delayed or stutter</p>
+</Slide>
+
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="FID/INP">
+  <h3>How to improve</h3> 
+  <ul>
+    <li class="fragment">
+      Break up long tasks
+    </li>
+    <li class="fragment">
+      Code-split and lazy-load non-critical packages or modules
+    </li>
+    <li class="fragment">
+      Offload heavy work to web workers, use scheduling APIs
+    </li>
+  </ul>
+</Slide>
+
+<!-- CLS Section -->
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="Cumulative Layout Shift (CLS)">
+  <h2>Cumulative Layout Shift (CLS)</h2> 
+</Slide>
+
+<Slide
+  sectionTitle="Key Performance Metrics" subSectionTitle="Cumulative Layout Shift (CLS)">
+  <h3>What it measures</h3> 
+  <p>Visual stability; unexpected layout shifts during page load and interaction</p>
+</Slide>
+
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="Cumulative Layout Shift (CLS)">
+  <h3>Why it matters</h3> 
+  <p>Layout shifts degrade user trust and can cause mis-taps (poor UX)</p>
+</Slide>
+
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="Cumulative Layout Shift (CLS)">
+  <h3>How to improve</h3> 
+  <ul>
+    <li class="fragment">
+      Reserve space for images/iframes with width/height or aspect-ratio
+    </li>
+    <li class="fragment">
+      Avoid inserting content above existing content
+    </li>
+    <li class="fragment">
+      Use CSS transforms for animations
+    </li>
+    <li class="fragment">
+      Use font-display or font-swap strategies
+    </li>
+  </ul>
+</Slide>
+
+<!-- FCP Section -->
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="First Contentful Paint (FCP)">
+  <h2>First Contentful Paint (FCP)</h2> 
+</Slide>
+
+<Slide
+  sectionTitle="Key Performance Metrics" subSectionTitle="First Contentful Paint (FCP)">
+  <h3>What it measures</h3> 
+  <p>Time to the first painted content (text, image, or canvas)</p>
+</Slide>
+
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="First Contentful Paint (FCP)">
+  <h3>Why it matters</h3> 
+  <ul>
+    <li class="fragment">
+      Signals the first moment the user sees something rendered
+    </li>
+    <li class="fragment">
+      Helps set expectations for perceived speed
+    </li>
+  </ul>
+</Slide>
+
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="First Contentful Paint (FCP)">
+  <h3>How to improve</h3> 
+  <ul>
+    <li class="fragment">
+      Reduce TTFB
+    </li>
+    <li class="fragment">
+      Inline critical CSS
+    </li>
+    <li class="fragment">
+      Defer non-critical scripts
+    </li>
+    <li class="fragment">
+      Preload important resources (fonts, hero images)
+    </li>
+  </ul>
+</Slide>
+
+<!-- TTI Section -->
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="Time to Interactive (TTI)">
+  <h2>Time to Interactive (TTI)</h2> 
+</Slide>
+
+<Slide
+  sectionTitle="Key Performance Metrics" subSectionTitle="Time to Interactive (TTI)">
+  <h3>What it measures</h3> 
+  <p>when a page becomes reliably interactive (all UI elements respond quickly to input)</p>
+</Slide>
+
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="Time to Interactive (TTI)">
+  <h3>Why it matters</h3> 
+  <p>A page that appears loaded but isn't responsive is frustrating for users.</p>
+</Slide>
+
+<Slide sectionTitle="Key Performance Metrics" subSectionTitle="Time to Interactive (TTI)">
+  <h3>How to improve</h3> 
+  <ul>
+    <li class="fragment">
+      Reduce main-thread work
+    </li>
+    <li class="fragment">
+      Defer/idle-load non-critical JS
+    </li>
+    <li class="fragment">
+      optimize bundle sizes
+    </li>
+  </ul>
+</Slide>

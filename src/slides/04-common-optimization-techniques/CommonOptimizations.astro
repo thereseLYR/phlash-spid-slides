@@ -1,0 +1,38 @@
+---
+import Slide from "../../components/Slide.astro"
+---
+
+<Slide sectionTitle="Common optimizations (React / Next.js / TypeScript)">
+</Slide>
+
+<Slide sectionTitle="Common optimizations (React / Next.js / TypeScript)" subSectionTitle="Low-hanging fruit">
+  <ul>
+    <li>Use Next.js Image component (or optimized image delivery) and add width/height to images to avoid CLS.
+    </li>
+    <li class="fragment">Enable HTTP caching and CDN for static assets; use immutable caching for hashed builds. 
+    </li>
+    <li class="fragment">Remove unused dependencies and tree-shake: prefer ESM imports and avoid large polyfills.
+    </li>
+  </ul>
+</Slide>
+
+<Slide sectionTitle="Common optimizations (React / Next.js / TypeScript)" subSectionTitle="App and bundle">
+  <ul>
+    <li>Code-split routes and components: dynamic import() for rarely-used UI and large components.</li>
+    <li class="fragment">Prefer server-side rendering (SSR) or incremental static regeneration (ISR) for critical pages to improve LCP.</li>
+    <li class="fragment">Analyze bundles with `next build && next analyze` (or `webpack-bundle-analyzer`) and remove hot paths.</li>
+  </ul>
+</Slide>
+
+<Slide sectionTitle="Common optimizations (React / Next.js / TypeScript)" subSectionTitle="Runtime and interactivity">
+  <ul>
+    <li class="fragment">Defer non-critical third-party scripts; load analytics and chat widgets after interaction or via consent.</li>
+  </ul>
+</Slide>
+
+<Slide sectionTitle="Common optimizations (React / Next.js / TypeScript)" subSectionTitle="TypeScript and dev-time">
+  <ul>
+    <li class="fragment">Keep TypeScript `skipLibCheck` and incremental builds on in CI to reduce feedback time; but ensure type safety for releases.</li>
+    <li class="fragment">Use ESLint rules that focus on bundle/size issues (ban large polyfills and encourage lazy imports).</li>
+  </ul>
+</Slide>

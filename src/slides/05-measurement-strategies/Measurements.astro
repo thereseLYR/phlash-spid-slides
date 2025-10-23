@@ -1,0 +1,26 @@
+---
+import Slide from "../../components/Slide.astro"
+---
+
+<Slide sectionTitle="Measurement strategies">
+  <h2>
+    Lab VS Field
+  </h2>
+</Slide>
+
+<Slide sectionTitle="Measurement strategies — lab vs field" subSectionTitle="Lab (synthetic) measurements">
+  <ul>
+    <li class="fragment">Tools: Lighthouse (DevTools / CLI), WebPageTest. Good for reproducible audits and debugging.</li>
+    <li class="fragment">Use in CI to prevent regressions. Remember lab only simulates a single device/network profile.</li>
+    <li class="fragment">This is what we will be using today for the workshop</li>
+  </ul>
+</Slide>
+
+<Slide sectionTitle="Measurement strategies — lab vs field" subSectionTitle="Field measurements">
+  <ul>
+    <li class="fragment">Also known as Real User Monitoring (RUM)</li>
+    <li class="fragment">Tools: Web Vitals JS, Google Analytics, New Relic Browser, or a custom RUM pipeline.</li>
+    <li class="fragment">Measures real users across devices and networks, taking into account data like geographic breakdowns and feature flags</li>
+    <li class="fragment">Collect LCP, INP, CLS, FCP, and custom business metrics. Use percentiles (75th/95th) to understand real impact.</li>
+  </ul>
+</Slide>
