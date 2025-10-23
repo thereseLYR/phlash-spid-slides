@@ -4,8 +4,8 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://thuchede.github.io",
-	base: "/building-accessible-ui",
+	site: "https://thereseLYR.github.io",
+	base: "/phlash-spid-slides",
 	integrations: [
 		tailwind({
 			applyBaseStyles: false,
